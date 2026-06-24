@@ -1,201 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AskInspo Sign In</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #050810;
-    }
-
-    .login-box {
-      width: 100%;
-      max-width: 420px;
-      background: #ffffff;
-      padding: 32px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    }
-
-    .login-box h1 {
-      margin: 0 0 8px;
-      font-size: 28px;
-      text-align: center;
-    }
-
-    .login-box p {
-      margin: 0 0 28px;
-      text-align: center;
-      color: #666;
-    }
-
-    .form-group {
-      margin-bottom: 18px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: #222;
-    }
-
-    input {
-      width: 100%;
-      padding: 14px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      font-size: 15px;
-      outline: none;
-    }
-
-    input:focus {
-      border-color: #111;
-    }
-
-    .password-wrapper {
-      position: relative;
-    }
-
-    .password-wrapper input {
-      padding-right: 48px;
-    }
-
-    .toggle-password {
-      position: absolute;
-      right: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      font-size: 20px;
-      line-height: 1;
-    }
-
-    .signin-btn {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 10px;
-      background: #111;
-      color: #fff;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: opacity 0.2s ease;
-    }
-
-    .signin-btn:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
-
-    .helper {
-      margin-top: 18px;
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <img class="mylogo" src="https://www.askinspo.com/assets/Inspo%20Logo%20white%202-Craw4Yae.svg" alt="logo">
+    <div class="login-container">
+        <h2>Welcome back</h2>
+        <p>Enter your details to access your account</p>
+        <form id="loginForm">
 
-  <div class="login-box">
-    <h1>Sign in</h1>
-    <p>Welcome back to AskInspo</p>
+            <div class="input-group">
+                <label for="Email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
 
-    <form id="signinForm">
-      <div class="form-group">
-        <label for="email">Email address</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-          required
-        />
-      </div>
+            <div class="input-group">
+                 <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
 
-      <div class="form-group">
-        <label for="password">Password</label>
+            <span class="password-icon" id="password-icon" onclick="document.getElementById('password-icon').innerHTML='password-icon'">👁️‍🗨️</span>
+        </form>
+        <button type="submit" id="signinBtn" onclick="document.getElementById('signinBtn').innerHTML='loading...'">Sign in</button>
 
-        <div class="password-wrapper">
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Enter your password"
-            required
-          />
-
-          <button
-            type="button"
-            class="toggle-password"
-            id="togglePassword"
-            aria-label="Show password"
-          >
-            👁️
-          </button>
+        <div>
+            <a href="#">Forgot Password?</a> <a href="#">Internship Portal</a> <br> <a href="#">Create an account</a>
         </div>
-      </div>
-
-      <button type="submit" class="signin-btn" id="signinBtn">
-        Sign in
-      </button>
-    </form>
-
-    <div class="helper">
-      Forgot password?
     </div>
-  </div>
-
-  <script>
-    const passwordInput = document.getElementById("password");
-    const togglePassword = document.getElementById("togglePassword");
-    const signinForm = document.getElementById("signinForm");
-    const signinBtn = document.getElementById("signinBtn");
-
-    togglePassword.addEventListener("click", function () {
-      const isPasswordHidden = passwordInput.type === "password";
-
-      passwordInput.type = isPasswordHidden ? "text" : "password";
-
-      togglePassword.textContent = isPasswordHidden ? "👁️" : "👁️‍🗨️";
-
-      togglePassword.setAttribute(
-        "aria-label",
-        isPasswordHidden ? "Hide password" : "Show password"
-      );
-    });
-
-    signinForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      signinBtn.textContent = "Loading...";
-      signinBtn.disabled = true;
-
-      setTimeout(function () {
-        signinBtn.textContent = "Sign in";
-        signinBtn.disabled = false;
-
-        alert("Login request completed. Connect this to your backend.");
-      }, 2000);
-    });
-  </script>
-
 </body>
 </html>

@@ -1,0 +1,89 @@
+ body{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+  justify-content: center;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.login-container{
+    background-color: rgb(39, 36, 36);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+}
+
+.mylogo{
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+
+p{
+    margin-bottom: 30px;
+    font-size: 0.9em;
+    color: rgb(199, 196, 196);
+}
+
+.input-group{
+    margin-bottom: 20px;
+    position: relative;
+    text-align: left;
+}
+
+.input-group label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+.input-group input{
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: #fff;
+}
+
+.input-group input:focus{
+    border-color: #00bcd4;
+}
+
+.input-group .password-icon{
+    position: absolute;
+    right: 10px;
+    top: 65%;
+    transform: -50%;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 1.1em;
+}
+
+button{
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #1a1a1a;
+    font-size:  1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover{
+    background-color: #00a0b0;
+}
