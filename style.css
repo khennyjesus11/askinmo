@@ -1,3 +1,7 @@
+ * {
+    box-sizing: border-box;
+}
+ 
  body{
   background-color: black;
   display: flex;
@@ -10,12 +14,13 @@
   font-family: sans-serif;
 }
 
-.login-container{
+.login-container {
     background-color: rgb(39, 36, 36);
     padding: 40px;
     border-radius: 10px;
     text-align: center;
     width: 350px;
+    max-width: 90%;
 }
 
 .mylogo{
@@ -46,7 +51,7 @@ p{
     color: #ddd;
 }
 
-.input-group input{
+.input-group input {
     padding: 12px 15px;
     border: none;
     border-radius: 5px;
@@ -55,6 +60,7 @@ p{
     outline: none;
     transition: border-color 0.3s ease;
     color: #fff;
+    box-sizing: border-box;
 }
 
 .input-group input:focus{

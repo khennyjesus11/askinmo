@@ -3,33 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AskInspo Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <img class="mylogo" src="https://www.askinspo.com/assets/Inspo%20Logo%20white%202-Craw4Yae.svg" alt="logo">
+
     <div class="login-container">
         <h2>Welcome back</h2>
         <p>Enter your details to access your account</p>
-        <form id="loginForm">
 
+        <form id="loginForm">
             <div class="input-group">
-                <label for="Email">Email</label>
+                <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Enter your email">
             </div>
 
             <div class="input-group">
-                 <label for="password">Password</label>
+                <label for="password">Password</label>
                 <input type="password" id="password" placeholder="Enter your password">
             </div>
 
-            <span class="password-icon" id="password-icon" onclick="document.getElementById('password-icon').innerHTML='password-icon'">👁️‍🗨️</span>
+            <span class="password-icon" id="password-icon">👁️‍🗨️</span>
+
+            <button type="button" id="signinBtn">Sign in</button>
         </form>
-        <button type="submit" id="signinBtn" onclick="document.getElementById('signinBtn').innerHTML='loading...'">Sign in</button>
 
         <div>
-            <a href="#">Forgot Password?</a> <a href="#">Internship Portal</a> <br> <a href="#">Create an account</a>
+            <a href="#">Forgot Password?</a>
+            <a href="#">Internship Portal</a>
+            <br>
+            <a href="#">Create an account</a>
         </div>
     </div>
+
+    <script>
+        const signinBtn = document.getElementById("signinBtn");
+
+        signinBtn.addEventListener("click", function () {
+            alert("The button was clicked");
+            window.print();
+        });
+    </script>
 </body>
 </html>
